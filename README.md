@@ -1,16 +1,16 @@
 # MonkeyKing
-an async crawler framwork
+an async crawler framework
 
 美猴王一根毛发就能变化成一只猴子，异步分布式多进程爬虫就跟它们一样，能够在互联网深处挖掘到我们想要的信息，避免了枯燥的人工操作
 
-这个框架是根据我在许多爬虫项目中，所爬取的诸多网站(一些商业网站，较多政府数据库)总结出来的一个架设在localhost的小型爬虫。设计这个框架的初衷是为了将已经学到的爬虫技术设计成一个便于扩展，功能齐全，方便初学者使用的工具；同时也让爬虫开发者减轻开发耗时，达到只需输入网址(CSV/Excel文件)和匹配规则，就可进行匹配的目的
+这个框架是根据我在许多爬虫项目中，所爬取的诸多网站(一些商业网站，较多政府数据库)总结出来的一个架设在localhost的小型爬虫。设计这个框架的初衷是为了让爬虫开发者减轻开发耗时，达到只需输入网址(CSV/Excel文件)和匹配规则，就可进行匹配的目的
 
-This framework is based on the experience from spider projects(some Commercial sitesand Government database) I participated in. The intention of this is to design a tool that allows developers to write less, crawling more - by simply entering URLs(or CSV/Excel files) and matching rules
+This framework is based on the experience of some spider projects(some Commercial sites and Government database) I participated in. The intention of this is to design a tool that allows developers to write less, crawling more - by simply entering URLs(or CSV/Excel files) and matching rules
 
 
 # 特点：
 
-* 完全python编写，支持异步多进程（muliprogress_handler.Dialo方法）
+* 完全python编写，封装好的异步多进程方法（muliprogress_handler.Dialo方法）
  * 使用python内置多线程方法Pool（我承认这个方法存在诸多使用问题与bug）
  * 可通过muliprogress_handler.core变量改变进程数
  * 使用redis进行进程通信
