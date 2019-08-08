@@ -1,5 +1,5 @@
 from multiprocessing import Pool
-from project.conf_redis import *
+from project.config.redis import *
 from project.page_catcher import page_cather
 
 

@@ -2,8 +2,8 @@ from __future__ import division
 from requests import get
 from time import sleep
 import random
-from project.conf_redis import *
-from project.conf_mongo import *
+from project.config.redis import *
+from project.config.mongoDB import *
 import json
 
 
@@ -67,7 +67,7 @@ class page_cather():
                     return None
             except:
                 i+=1
-                print('other error,retry %s time'%i)
+                print('request &s error,retry %s time'%(url,i))
 
 
 

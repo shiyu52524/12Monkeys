@@ -1,5 +1,5 @@
 import csv
-from project.conf_redis import *
+from project.config.redis import *
 
 class read_data:
 
