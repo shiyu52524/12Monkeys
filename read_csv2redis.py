@@ -15,4 +15,4 @@ class read_data:
                 print(row)
                 key = "%s"%row[0]
                 url = "%s"%row[1]
-                r1.set(key,url)  #将内容写入redis
+                r1.set(key,url)

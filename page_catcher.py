@@ -4,6 +4,7 @@ from time import sleep
 import random
 from config.redis_config import *
 from config.mongoDB_config import *
+import json
 
 
 
@@ -36,10 +37,7 @@ class page_cather():
                        'Cookie':self.cookie
                        }
         self.proxies = {}
-
-
-
-
+        self.json_parser = False
 
 
     def get_page_index(self,url):
@@ -74,12 +72,13 @@ class page_cather():
 
 
 
-    def catch_response(self,key, url):
+    def catch_content(self,key,url):
         response = self.get_page_index(url)
-        if response is not None:
+        content = json.loads(response) if self.json_parser else response.text
+        if content is not None:
             mydict = {'key': bytes.decode(key),
                       'url': bytes.decode(url),
-                      'response': response.text
+                      'response': content
                       }
             mycol.insert_one(mydict)
             r1.delete(key)
@@ -88,12 +87,6 @@ class page_cather():
             r1.delete(key)
             r2.set(key, url)
         a = 1 - len(r1.keys()) / l
-        bb = "%.3f%%" % (a * 100)
-        print(bb)
+        percentage = "%.3f%%" % (a * 100)
+        print(percentage)
 
-
-
-    def pubchem_parser(self,CASID):
-        url = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/%s/cids/JSON'%CASID
-        response = self.get_page_index(url)
-        return response

@@ -4,5 +4,4 @@ myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 today = datetime.date.today()
 formatted_today = today.strftime('%y%m%d')
 mydb = myclient[str(formatted_today)]
-colname = 'Scrapy'
-mycol = mydb[colname]
+mycol = mydb['Scrapy']
