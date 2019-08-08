@@ -1,10 +1,10 @@
 import csv
-from config.redis_config import *
+from project.conf_redis import *
 
 class read_data:
 
     def __init__(self):
-        self.path = r"E:\New_desk\test.csv"
+        self.path = ""
 
     def read_csv(self):
         r1.flushdb()

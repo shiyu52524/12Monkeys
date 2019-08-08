@@ -1,6 +1,6 @@
 from multiprocessing import Pool
-from config.redis_config import *
-from page_catcher import page_cather
+from project.conf_redis import *
+from project.page_catcher import page_cather
 
 
 
@@ -10,9 +10,9 @@ class mutiprogress():
         self.core = 8
 
 
-    def Diablo(self):
+    def MonkeyKing(self):
         cather = page_cather()
-        pool = Pool(processes=self.core)
+        pool = Pool(processes=8)
         for key in r1.keys():
             pool.apply_async(cather.catch_content, (key, r1[key],))
         pool.close()

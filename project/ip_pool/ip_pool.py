@@ -1,7 +1,7 @@
 import random
 from bs4 import BeautifulSoup
-from page_catcher import Scrapy
-from config.redis_config import *
+from scripts.page_catcher import Scrapy
+from scripts.conf_redis import *
 
 class ip_pool():
 
