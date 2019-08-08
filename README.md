@@ -9,9 +9,11 @@ This small scrapy framework works locally, based on the experience from crawler 
 
 
 # 特点：
+
 * 完全python编写，支持多进程（muliprogress_handler.Dialo方法）
 	* 使用的是python内置方法Pool（我承认这个方法存在诸多使用问题与bug）
 	* 可通过core变量改变线程数
+* 网页解析和网页内容爬取是分开的，爬虫也会在后台将所有爬取任务的response或者json文件储存在DB下
 * 依赖于redis和mongoDB，所以在使用前请在本地开启服务
 * 支持断点续爬
 * 支持对返回的json文件进行读取处理
@@ -23,6 +25,7 @@ This small scrapy framework works locally, based on the experience from crawler 
 	* mutiprogressing.Pool is used（although there are crashes and bugs caused by the method）
 	* you can change progress num by calling muliprogress_handler.core
 	* if you have more suggestions about mutiprogressing, pls tell me
+* page parsing and content crawling are separate. the response.text or json files will be downloaded in local database
 * depend on redis & mongoDB, you should start those services before running
 * restarting at breakpoint is supported
 * a json parser is included
