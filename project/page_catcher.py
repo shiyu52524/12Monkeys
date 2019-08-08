@@ -5,7 +5,7 @@ import random
 from project.conf_redis import *
 from project.conf_mongo import *
 import json
-mycol = mydb['Scrapy']
+
 
 
 
