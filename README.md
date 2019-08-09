@@ -1,6 +1,11 @@
 # MonkeyKing
 an async crawler framework
 
+![](https://img.shields.io/badge/Build-Master-brightgreen) 
+![](https://img.shields.io/badge/Vision-v0.0.1-blue)
+![](https://img.shields.io/badge/Python-3.7-orange)
+![](https://img.shields.io/badge/Author-shiyu52524-lightgrey)
+
 美猴王一根毛发就能变化成一只猴子，异步分布式多进程爬虫就跟它们一样，能够在互联网深处挖掘到我们想要的信息，避免了枯燥的人工操作
 
 这个框架是根据我在许多爬虫项目中，所爬取的诸多网站(一些商业网站，较多政府数据库)总结出来的一个架设在localhost的小型爬虫。设计这个框架的初衷是为了让爬虫开发者减轻开发耗时，达到只需输入网址(CSV/Excel文件)和匹配规则，就可进行匹配的目的
