@@ -42,3 +42,5 @@ This framework is based on the experience of some spider projects(some Commercia
 * 完善IP池工具
 * 更加智能的网页解析器
 * 结果文件生成接口（CSV,EXCEL）
+
+PS 最近在做别的项目，这个暂时放一放
